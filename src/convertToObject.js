@@ -10,7 +10,7 @@ function convertToObject(sourceString) {
     .split(';')
     .filter((style) => style.trim() !== '')
     .reduce((prev, element) => {
-      const splittedStyle = element.split(':').map((el) => el.trim());
+      const [property, value] = element.split(':').map((el) => el.trim());
 
       prev[splittedStyle[0]] = splittedStyle[1];
 
